@@ -47,8 +47,7 @@ test_generator = datagen.flow_from_directory(
     class_mode='binary')
 
 model = Sequential()
-model.add(Conv2D(32, (3, 3), input_shape=(150, 150, 3)))
-model.add(Activation('relu'))
+model.add(Conv2D(32, (3, 3), input_shape=(150, 150, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Conv2D(32, (3, 3), activation='relu'))
